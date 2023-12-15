@@ -5,7 +5,8 @@ typedef enum {
   IDLE,
   ALTERNATING,
   BLINKING,
-  JINGLE
+  JINGLE,
+  MIXED
 } State;
 
 void set_state(State state);

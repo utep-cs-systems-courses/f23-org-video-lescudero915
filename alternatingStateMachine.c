@@ -1,8 +1,11 @@
 #include <msp430.h>
 #include "led.h"
+#include "lcdutils.h"
+#include "lcddraw.h"
 
 static unsigned char greenBlinkLimit = 0;
 static unsigned char redBlinkLimit = 8;
+
 
 static void update_blink()
 {

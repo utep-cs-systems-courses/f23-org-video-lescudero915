@@ -1,10 +1,11 @@
 #include <msp430.h>
 #include "led.h"
+#include "lcdutils.h"
+#include "lcddraw.h"
 
 static void once_per_second()
 {
   static unsigned char number = 0;
-
   switch (number) {
   case 0:
     toggle_green(0);
@@ -38,6 +39,7 @@ static void update_second()
   }
 }
 
+
 void advance_blinking()
 {
   update_second();
@@ -48,3 +50,5 @@ void reset_blinking()
   toggle_green(0);
   toggle_red(0);
 }
+
+

@@ -3,6 +3,8 @@
 #include "led.h"
 #include "buzzer.h"
 #include "switches.h"
+#include "lcdutils.h"
+#include "lcddraw.h"
 
 int main(void) {
     configureClocks();
@@ -10,11 +12,9 @@ int main(void) {
     switch_init();
     led_init();
     buzzer_init();
-    
-    //switch_interrupt_handler();
-
+    lcd_init();
+    clearScreen(COLOR_WHITE);
+    initialMenu();
     or_sr(0x18);
 }
-
-
 
